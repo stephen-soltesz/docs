@@ -52,8 +52,8 @@ to email, Pagerduty, Slack etc.
 
 ### Promdash
 
-[Promdash](../../visualization/promdash/) is a Ruby-on-Rails dashboard builder for Prometheus.
-It is similar at a high-level to Grafana, but is specific to Prometheus.
+Promdash is a deprecated Ruby-on-Rails dashboard builder for Prometheus. It was
+similar at a high-level to Grafana, but was specific to Prometheus.
 
 ### Prometheus
 
@@ -70,6 +70,25 @@ a wide range of operations including aggregation, slicing and dicing, prediction
 The [Pushgateway](../../instrumenting/pushing/) persists the most recent push
 of metrics from batch jobs. This allows Prometheus to scrape their metrics
 after they have terminated.
+
+### Remote Read
+
+Remote read is a Prometheus feature that allows transparent reading time series from
+other systems (such as long term storage) as part of queries.
+
+### Remote Read Adapter
+
+Not all systems directly support remote read. A remote read adapter sits between
+Prometheus and another system, converting time series requests and responses between them.
+
+### Remote Read Endpoint
+
+A remote read endpoint is what Prometheus talks to when doing a remote read.
+
+### Remote Write
+
+Remote write is a Prometheus feature that allows sending ingested samples on the
+fly to other systems, such as long term storage.
 
 ### Silence
 
